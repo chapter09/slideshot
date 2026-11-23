@@ -1,8 +1,9 @@
 # SlideShot
 
-Support and privacy pages for SlideShot, an iPhone app that captures presentation slides,
+Landing, support and privacy pages for SlideShot, an iPhone app that captures presentation slides,
 straightens them and labels them on-device.
 
+- Home: https://www.haow.us/slideshot/
 - Support: https://www.haow.us/slideshot/support.html
 - Privacy policy: https://www.haow.us/slideshot/privacy.html
 
