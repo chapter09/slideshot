@@ -7,87 +7,32 @@
 <meta name="description" content="SlideShot captures the slides from every talk you attend, straightens them, and files them under the right talk, speaker and conference, all on your iPhone.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://www.haow.us/slideshot/">
+<link rel="alternate" hreflang="en" href="https://www.haow.us/slideshot/">
+<link rel="alternate" hreflang="ja" href="https://www.haow.us/slideshot/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://www.haow.us/slideshot/zh-hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://www.haow.us/slideshot/zh-hant/">
+<link rel="alternate" hreflang="ko" href="https://www.haow.us/slideshot/ko/">
+<link rel="alternate" hreflang="x-default" href="https://www.haow.us/slideshot/">
 <link rel="icon" type="image/png" href="images/icon.png">
 <link rel="apple-touch-icon" href="images/icon.png">
+<link rel="stylesheet" href="home.css">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="SlideShot: Talk Capture">
 <meta property="og:description" content="Conference slides, organized. Capture, straighten and file every slide on your iPhone.">
 <meta property="og:url" content="https://www.haow.us/slideshot/">
 <meta property="og:image" content="https://www.haow.us/slideshot/images/icon.png">
 <meta name="twitter:card" content="summary">
-<style>
-  :root {
-    --ink:#0F172A; --muted:#64748B; --accent:#4F46E5; --page:#F4F5FA; --card:#fff;
-    --line:rgba(15,23,42,.07); --shadow:0 12px 32px rgba(30,42,120,.18);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ink:#E5E7EB; --muted:#94A3B8; --accent:#A5B4FC; --page:#0B1020; --card:#151B2E;
-      --line:rgba(255,255,255,.08); --shadow:0 12px 32px rgba(0,0,0,.45);
-    }
-  }
-  * { box-sizing:border-box; }
-  html { -webkit-text-size-adjust:100%; }
-  body { margin:0; font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-         color:var(--ink); background:var(--page); overflow-wrap:break-word; }
-  a { color:var(--accent); }
-  img { display:block; max-width:100%; height:auto; }
-
-  header { background:linear-gradient(135deg,#1E2A78,#4F46E5); color:#fff; text-align:center;
-           padding:48px 24px 44px; }
-  .hero { max-width:640px; margin:0 auto; }
-  .hero .icon { width:112px; height:112px; margin:0 auto 20px; border-radius:25px;
-                box-shadow:0 10px 30px rgba(10,14,50,.45), 0 0 0 1px rgba(255,255,255,.18); }
-  .eyebrow { margin:0; color:#FBBF24; letter-spacing:.12em; font-size:12px; font-weight:600;
-             text-transform:uppercase; }
-  header h1 { margin:8px 0 0; font-size:clamp(28px, 7vw, 40px); line-height:1.15; letter-spacing:-.01em; }
-  .subtitle { margin:6px 0 0; font-size:clamp(17px, 4.4vw, 21px); color:rgba(255,255,255,.88); font-weight:500; }
-  .pitch { margin:18px auto 0; max-width:34em; color:rgba(255,255,255,.82); }
-  .store { display:inline-block; margin-top:26px; padding:12px 26px; border-radius:999px;
-           background:#fff; color:#1E2A78; font-weight:600; text-decoration:none;
-           box-shadow:0 6px 18px rgba(10,14,50,.3); }
-  .store:hover, .store:focus-visible { background:#EEF0FF; }
-  .note { margin:10px 0 0; font-size:13px; color:rgba(255,255,255,.7); }
-  @media (max-width:479px) {
-    header { padding:36px 20px 36px; }
-    .hero .icon { width:92px; height:92px; border-radius:21px; margin-bottom:16px; }
-    .pitch { font-size:15px; }
-  }
-
-  main { max-width:960px; margin:0 auto; padding:32px 24px 8px; }
-  h2 { font-size:22px; margin:8px 0 16px; letter-spacing:-.01em; }
-
-  /* Screenshots: three across on wide screens, a swipeable row on phones. */
-  .shots { list-style:none; margin:0 -24px 40px; padding:4px 24px 18px; display:grid;
-           grid-auto-flow:column; grid-auto-columns:min(64%, 280px); gap:16px;
-           overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:0 24px;
-           -webkit-overflow-scrolling:touch; scrollbar-width:none; }
-  .shots::-webkit-scrollbar { display:none; }
-  .shots li { scroll-snap-align:start; }
-  .shots img { width:100%; border-radius:20px; box-shadow:var(--shadow); }
-  @media (min-width:720px) {
-    .shots { grid-auto-flow:row; grid-template-columns:repeat(3, 1fr); grid-auto-columns:auto;
-             gap:24px; margin:0 0 48px; padding:0; overflow:visible; }
-  }
-
-  .features { list-style:none; margin:0 0 24px; padding:0; display:grid; gap:14px; }
-  @media (min-width:640px) { .features { grid-template-columns:repeat(2, 1fr); gap:16px; } }
-  .features li { background:var(--card); border-radius:14px; padding:18px 20px 16px;
-                 border:1px solid var(--line); }
-  .features .tag { margin:0; color:var(--accent); letter-spacing:.1em; font-size:11px;
-                   font-weight:700; text-transform:uppercase; }
-  .features h3 { margin:4px 0 4px; font-size:17px; line-height:1.3; }
-  .features p { margin:0; color:var(--muted); font-size:15px; }
-  .req { margin:0 0 8px; color:var(--muted); font-size:14px; text-align:center; }
-
-  footer { max-width:960px; margin:0 auto; padding:24px 24px 40px; text-align:center;
-           color:var(--muted); font-size:14px; }
-  footer nav { display:flex; flex-wrap:wrap; justify-content:center; gap:6px 20px; margin-bottom:8px; }
-  footer p { margin:0; }
-</style>
 </head>
 <body>
 <header>
+  <nav class="langs" aria-label="Language">
+    <a href="./" hreflang="en" lang="en" aria-current="page">English</a>
+    <a href="ja/" hreflang="ja" lang="ja">日本語</a>
+    <a href="zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+    <a href="zh-hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+    <a href="ko/" hreflang="ko" lang="ko">한국어</a>
+  </nav>
   <div class="hero">
     <img class="icon" src="images/icon.png" width="112" height="112" alt="SlideShot app icon">
     <p class="eyebrow">For iPhone</p>

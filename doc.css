@@ -1,0 +1,27 @@
+/* The support and privacy pages in every language folder. */
+:root { --ink:#0F172A; --muted:#64748B; --indigo:#4F46E5; --page:#F4F5FA; --card:#fff; }
+body { margin:0; font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:var(--page); }
+header { background:linear-gradient(135deg,#1E2A78,#4F46E5); color:#fff; padding:48px 24px 36px; }
+header p { margin:0; color:#FBBF24; letter-spacing:.12em; font-size:12px; font-weight:600; text-transform:uppercase; }
+header p a { color:inherit; text-decoration:none; }
+header p a:hover, header p a:focus-visible { text-decoration:underline; }
+header h1 { margin:8px 0 0; font-size:30px; }
+main { max-width:680px; margin:0 auto; padding:24px; }
+section { background:var(--card); border-radius:14px; padding:4px 20px; margin:0 0 16px; }
+h2 { font-size:17px; margin:16px 0 4px; }
+.meta { color:var(--muted); font-size:14px; }
+a { color:var(--indigo); }
+
+/* Language menu at the top of the header. */
+.langs { display:flex; flex-wrap:wrap; gap:2px 16px; margin:-28px 0 24px; font-size:13px; line-height:1.8; }
+.langs a { color:rgba(255,255,255,.75); text-decoration:none; }
+.langs a:hover, .langs a:focus-visible { color:#fff; text-decoration:underline; }
+.langs a[aria-current] { color:#fff; font-weight:600; }
+@media (max-width:479px) { .langs { gap:2px 12px; } }
+
+/* Chinese, Japanese and Korean: the right fonts on Windows and Android too. */
+html:lang(ja) body { font-family:-apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Segoe UI", "Yu Gothic UI", Meiryo, "Noto Sans JP", sans-serif; }
+html:lang(zh-Hans) body { font-family:-apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", sans-serif; }
+html:lang(zh-Hant) body { font-family:-apple-system, BlinkMacSystemFont, "PingFang TC", "Segoe UI", "Microsoft JhengHei", "Noto Sans TC", sans-serif; }
+html:lang(ko) body { font-family:-apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", "Malgun Gothic", "Noto Sans KR", sans-serif;
+                     word-break:keep-all; }
