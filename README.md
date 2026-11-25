@@ -16,4 +16,8 @@ the default, and the translated privacy policies say the English version applies
 The pages share `home.css` (landing pages) and `doc.css` (support and privacy). When you change a
 page, change the same page in every language folder.
 
+The site's CDN caches `home.css` and `doc.css` for four hours but the pages for ten minutes, so a
+returning visitor can get a new page with an old stylesheet. The landing pages link
+`home.css?v=2`: when you change a stylesheet, raise that number in every page that links it.
+
 Found a problem or have a question? [Open an issue](https://github.com/chapter09/slideshot/issues/new).
